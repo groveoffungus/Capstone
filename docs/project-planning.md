@@ -48,13 +48,13 @@ Archeologists and Cultural Investigators working with specific data points withi
   - My application will be for smaller entities who want to self-host the data.
 
 ## Wireframes
-- ![Main Wire Frame] (./WireFrameMain.pdf)
-- ![About Wire Frame] (./WireFrameAbout.pdf)
-- ![Admin Wire Frame] (./WireFrameAdmin.pdf)
-- ![Project Wire Frame] (./WireFrameProject.pdf)
+- ![Main Wire Frame] (./WireFrameMain.png)
+- ![About Wire Frame] (./WireFrameAbout.png)
+- ![Admin Wire Frame] (./WireFrameAdmin.png)
+- ![Project Wire Frame] (./WireFrameProject.png)
 
 ## User Flow Diagram
-- ![User Flow Diagram] (./UserFlow.pdf)
+- ![User Flow Diagram] (./UserFlow.png)
 
 ## SWOT Analysis
 - [SWOT Analysis] (./swot.md)
