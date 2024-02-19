@@ -48,7 +48,7 @@ Archeologists and Cultural Investigators working with specific data points withi
   - My application will be for smaller entities who want to self-host the data.
 
 ## Wireframes
-- ![Main Wire Frame] (./WireFrameMain.png)
+- ![Main Wire Frame](./WireFrameMain.png)
 - ![About Wire Frame] (./WireFrameAbout.png)
 - ![Admin Wire Frame] (./WireFrameAdmin.png)
 - ![Project Wire Frame] (./WireFrameProject.png)
