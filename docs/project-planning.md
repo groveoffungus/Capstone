@@ -4,7 +4,7 @@
 I want to build an application that can be used by Archeologists/Cultural Investigators for storing relative project data points.
 
 ## Audience
-Archeologists and Cultural Investigators
+Archeologists and Cultural Investigators working with specific data points within field projects.
 
 
 ## Application Content
@@ -23,7 +23,11 @@ Archeologists and Cultural Investigators
 
 
 ## Research
-  - List Applications Researched: (links to websites / applications)
+  - [Archeology Guidelines - Good Practices] (https://archaeologydataservice.ac.uk/help-guidance/guides-to-good-practice/digital-archiving/about-these-guidelines/)
+  - [SkinSoft S-archeo] (https://www.skinsoft-lab.com/software/archaelogy-collection-management)
+  - [Digital Archeological Data] (https://intarch.ac.uk/journal/issue58/22/full-text.html)
+  - [Preservica] (https://preservica.com/starter?gad_source=1&gclid=CjwKCAiA_aGuBhACEiwAly57MQDJRK8QXo6UUBxS6iR9Zu7ye52jfr3NLR2uuiNNt2pzLXh-56dv_xoCakIQAvD_BwE)
+  - [Arches] (https://www.archesproject.org/)
   - List what you like about each site:
   - List what you do not like about each site:
   - How my application will be different:
@@ -35,4 +39,4 @@ Archeologists and Cultural Investigators
 - Create and provide link to User Flow Diagram
 
 ## SWOT Analysis
-- Create and provide link to SWOT Analysis
+- [SWOT Analysis] (docs/swot.md)
