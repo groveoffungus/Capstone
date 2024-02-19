@@ -51,7 +51,7 @@ Archeologists and Cultural Investigators working with specific data points withi
 - [Main Wire Frame] (WireFrameMain.png)
 - [About Wire Frame] (WireFrameAbout.png)
 - [Admin Wire Frame] (WireFrameAdmin.png)
-- !Project Wire Frame] (WireFrameProject.png)
+- [Project Wire Frame] (WireFrameProject.png)
 
 ## User Flow Diagram
 - [User Flow Diagram] (UserFlow.png)
