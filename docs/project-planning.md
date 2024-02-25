@@ -57,4 +57,20 @@ Archeologists and Cultural Investigators working with specific data points withi
 - ![User Flow Diagram](./UserFlow.png)
 
 ## SWOT Analysis
-- ![SWOT Analysis](./swot.md)
+- [SWOT Analysis](./swot.md)
+
+## APIs
+- Google Maps
+  - [Add a Google Map with JavaScript] (https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
+  - Good documentation
+  - Video examples of how to use
+
+- MapQuest
+  - [MapQuest Developer] (https://developer.mapquest.com/documentation/)
+  - Good documentation
+  - Plenty of examples
+
+- TomTom
+  - [TomTom Maps APIs for Developers] (https://developer.tomtom.com/free-maps-api)
+  - Registration is required
+  - Only allows 2500 free daily transactions
