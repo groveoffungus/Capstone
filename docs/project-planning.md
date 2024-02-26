@@ -60,6 +60,8 @@ Archeologists and Cultural Investigators working with specific data points withi
 - [SWOT Analysis](./swot.md)
 
 ## APIs
+After looking through the different APIs, the first 2 would be the ones to use.
+
 - Google Maps
   - [Add a Google Map with JavaScript] (https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
   - Good documentation
