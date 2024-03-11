@@ -11,7 +11,7 @@ Archeologists and Cultural Investigators working with specific data points withi
   - Main Page
     - Select a project to work on
   - About Page
-    - Explain what the application is and contact information
+    - Explain what the application is about
     - Have application user instructions
   - Admin Page
     - List current project for editing and deletion
@@ -20,13 +20,19 @@ Archeologists and Cultural Investigators working with specific data points withi
     - List project data points
     - Edit, delete, map current data points
     - Create a new data point
+  - Contact Page
+    - Contact information
 
   - The purpose of my application is to provide a way to keep track of cultural data points within projects
 
   - This will solve the issues with lost data point information and locations
 
   - Attributes of your website
-    - Colors palette will include white, lightgreen, and light blue
+    - Colors palette
+      - Green #A5DD9B
+      - Lt Green #C5EBAA
+      - Yellow #F6F193
+      - Tan #F2C18D
     - Images will be satellite imagery obtained through an API
     - Fonts will be standard type and easily readable, and black in color
     - Maybe a logo
