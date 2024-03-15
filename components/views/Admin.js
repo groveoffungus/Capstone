@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default () => html`
   <section id="admin">
-    <h2>Place Holder</h2>
+    <h2>Place Holder for Admin</h2>
     <p>
       Etiam egestas consectetur gravida. Nulla mollis suscipit sapien sed
       fermentum. Integer vitae eros a magna vulputate aliquam. Suspendisse sed
