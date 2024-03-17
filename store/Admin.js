@@ -1,4 +1,4 @@
 export default {
-  header: "Admin Page",
+  header: "The Cultural Archiver",
   view: "Admin",
 };
