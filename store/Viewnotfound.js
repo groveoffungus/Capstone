@@ -1,4 +1,4 @@
 export default {
-  header: "The Cultural Archiver",
+  header: "View Not Found",
   view: "Viewnotfound",
 };

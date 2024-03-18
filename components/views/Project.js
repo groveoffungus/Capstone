@@ -2,28 +2,17 @@ import html from "html-literal";
 
 export default () => html`
   <section id="project">
-    <h2>Project Selection</h2>
+    <h2>Place Holder for Project Select</h2>
     <p>
-      All cultural data points are connected with the project.
-      Please select from the drop down menu a project to work on.
-      If this is a new project, proceed to the Admin Panel for project creation.
+      Etiam egestas consectetur gravida. Nulla mollis suscipit sapien sed
+      fermentum. Integer vitae eros a magna vulputate aliquam. Suspendisse sed
+      pulvinar augue, auctor mollis lectus. Class aptent taciti sociosqu ad
+      litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend
+      diam quis libero sollicitudin efficitur. Nullam sapien eros, tempor eget
+      vulputate ut, interdum vel orci. Donec sit amet tempor mi. Nam feugiat
+      cursus egestas. Suspendisse eget orci et ex mattis ornare tempor non
+      tellus. Suspendisse gravida neque in urna congue bibendum. Duis dui odio,
+      pharetra nec odio ac, ornare vulputate nibh.
     </p>
-
-    <section id="projectSelect">
-    <form id="order" method="POST" action="">
-      <h2>Select a project</h2>
-      <div>
-        <label for="project">Project:</label>
-        <select id="project" name="project">
-          <option value="">Select a Project</option>
-          <option value="tempData1">TempData1</option>
-          <option value="tempData2">TempData2</option>
-          <option value="tempData3">TempData3</option>
-          <option value="tempData4">TempData4</option>
-        </select>
-      </div>
-      <input type="submit" name="submit" value="Submit Project" />
-    </form>
-    </section>
   </section>
 `;
