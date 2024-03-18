@@ -75,9 +75,9 @@ footer {
   }
 }
 
-#projectForm {
+#projectSelect {
   display: flex;
-  align-items: center;
+  justify-content: center;
   border: 1px solid;
   background-color: #F2C18D;
 }
