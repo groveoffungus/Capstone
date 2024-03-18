@@ -1,7 +1,7 @@
 /* CSS stylesheet for the cultural archive app */
 
 body {
-  background-color: white;
+  background-color: lightgreen;
 }
 
 h1 {
@@ -21,63 +21,6 @@ p {
 
 footer {
   border-top: solid 1px black;
-  text-align: center;
   padding: 2rem 2rem 4rem;
   margin: 1rem 1rem;
-}
-
-@media (max-width: 549px){
-  .hidden--mobile {
-    display: none !important;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  nav > i {
-    padding: 1rem;
-    font-size: 2em;
-  }
-
-  nav > ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 0 0;
-  }
-
-  nav > ul > li {
-    padding: 0.5rem;
-    list-style-type: none;
-  }
-}
-
-@media (min-width: 550px) {
-  nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0;
-  }
-
-  nav > ul > li {
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid;
-    padding: 0.5rem 0.5rem;
-    border-radius: 25px;
-  }
-
-  nav > .fa-bars {
-    display: none;
-  }
-}
-
-#projectForm {
-  display: flex;
-  align-items: center;
-  border: 1px solid;
-  background-color: #F2C18D;
 }
