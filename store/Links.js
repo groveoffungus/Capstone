@@ -1,6 +1,7 @@
 export default [
-  { title: "Main", text: "Main" },
+  { title: "Home", text: "Home" },
   { title: "About", text: "About" },
-  { title: "Contact", text: "Contact" },
+  { title: "Create", text: "Create" },
+  { title: "Point", text: "Point" },
   { title: "Admin", text: "Admin" },
 ];
