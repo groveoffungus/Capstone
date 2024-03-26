@@ -18,13 +18,6 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-  document.querySelector(".fa-bars").addEventListener("click", () => {
-    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-  });
-}
-
-
-function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
@@ -38,7 +31,6 @@ function afterRender(state) {
       // Get the form element
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
-
 
       // Create a request body object to send to the API and make sure dataPoint is defaulted to true
       const requestData = {
@@ -76,7 +68,9 @@ function afterRender(state) {
         const filter = document.getElementById("filter").value;
 
         axios
-          .get(`${process.env.CULTURAL_ARCHIVE_API_URL}/projects?project=${filter}`)
+          .get(
+            `${process.env.CULTURAL_ARCHIVE_API_URL}/projects?project=${filter}`
+          )
           .then(response => {
             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             store.Point.points = response.data;
@@ -96,7 +90,9 @@ function afterRender(state) {
 
         if (confirm(`Are you sure you want to delete ${projectId}`)) {
           axios
-            .delete(`${process.env.CULTURAL_ARCHIVE_API_URL}/projects/${projectId}`)
+            .delete(
+              `${process.env.CULTURAL_ARCHIVE_API_URL}/projects/${projectId}`
+            )
             .then(response => {
               // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
               store.Create.points.splice(projectIndex, 1);
@@ -110,8 +106,6 @@ function afterRender(state) {
     });
   }
 }
-
-
 
 router.hooks({
   before: (done, params) => {
