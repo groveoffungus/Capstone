@@ -41,7 +41,7 @@ export default () => html`
           step="any"
           name="lat"
           id="lat"
-          placeholder="0.0000"
+          value=0.0000
           required
         />
       </div>
@@ -52,13 +52,13 @@ export default () => html`
           step="any"
           name="lon"
           id="lon"
-          placeholder="0.0000"
+          value=0.0000
           required
         />
       </div>
       <div>
         <label for="notes">Notes:</label>
-        <input type="text" name="notes" id="notes" placeholder="Enter Notes" />
+        <input type="text" name="notes" id="notes" placeholder="Enter Notes" maxlength="50" />
       </div>
       <input type="submit" name="submit" value="Submit Point" />
     </form>
