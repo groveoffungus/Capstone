@@ -49,9 +49,11 @@ function afterRender(state) {
         // Make a POST request to the API to create a new data point
         .post(`${process.env.CULTURAL_ARCHIVE_API_URL}/projects`, requestData)
         .then(response => {
-          //  Then push the new point onto the Create state projects attribute, so it can be displayed in the point list
-          store.Create.points.push(response.data);
-          router.navigate("/Point");
+          // After successfully entering and saving new data
+          // Display success message and wait for user click OK
+          // Return to a fresh create view
+          confirm(`Data entry is successful for ${response.data.point}.`);
+          router.navigate("/Create");
         })
         // If there is an error log it to the console
         .catch(error => {
@@ -59,6 +61,7 @@ function afterRender(state) {
         });
     });
   }
+
   if (state.view == "Point") {
     document
       .getElementById("search-button")
@@ -81,32 +84,75 @@ function afterRender(state) {
           });
       });
 
-    Array.from(document.getElementsByClassName("delete")).forEach(button => {
+    //Select button
+    Array.from(document.getElementsByClassName("edit")).forEach(button => {
       button.addEventListener("click", event => {
         event.preventDefault();
 
-        const projectId = event.target.dataset.id;
-        const projectIndex = event.target.dataset.index;
+        // const singlePoint = document.getElementById("").value;
+        const singleIndex = event.target.dataset.index;
 
-        if (confirm(`Are you sure you want to delete ${projectId}`)) {
-          axios
-            .delete(
-              `${process.env.CULTURAL_ARCHIVE_API_URL}/projects/${projectId}`
-            )
-            .then(response => {
-              // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-              store.Create.points.splice(projectIndex, 1);
-              router.navigate("/Point");
-            })
-            .catch(error => {
-              console.log("It puked", error);
-            });
-        }
+        router.navigate("/Singlepoint");
       });
     });
   }
-}
 
+  if (state.view == "Admin") {
+    document
+      .getElementById("search-button")
+      .addEventListener("click", event => {
+        event.preventDefault();
+
+        const filter = document.getElementById("filter").value;
+
+        axios
+          .get(
+            `${process.env.CULTURAL_ARCHIVE_API_URL}/projects?project=${filter}`
+          )
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            store.Admin.points = response.data;
+            router.navigate("/Admin");
+          })
+          .catch(error => {
+            console.log("It puked", error);
+          });
+      });
+
+    //Select button
+    Array.from(document.getElementsByClassName("save")).forEach(button => {
+      button.addEventListener("click", event => {
+        event.preventDefault();
+
+        // const singlePoint = document.getElementById("").value;
+        const singleIndex = event.target.dataset.index;
+
+        router.navigate("/Admin");
+      });
+    });
+  }
+
+  // if (state.view == "Singlepoint") {
+  //   document
+  //     .getElementById("search-button")
+  //     .addEventListener("click", event => {
+  //       event.preventDefault();
+
+  //       axios
+  //         .get(
+  //           `${process.env.CULTURAL_ARCHIVE_API_URL}/projects?project=${singleIndex}`
+  //         )
+  //         .then(response => {
+  //           // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+  //           store.Point.points = response.data;
+  //           // router.navigate("/Point");
+  //         })
+  //         .catch(error => {
+  //           console.log("It puked", error);
+  //         });
+  //     });
+  // }
+}
 router.hooks({
   before: (done, params) => {
     // We need to know what view we are on to know what data to fetch
@@ -152,6 +198,34 @@ router.hooks({
             done();
           });
         break;
+      case "Admin":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.CULTURAL_ARCHIVE_API_URL}/projects`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            store.Create.points = response.data;
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
+            done();
+          });
+        break;
+      // case "Singlepoint":
+      //   // New Axios get request utilizing already made environment variable
+      //   axios
+      //     .get(`${process.env.CULTURAL_ARCHIVE_API_URL}/projects`)
+      //     .then(response => {
+      //       // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+      //       store.Create.points = response.data;
+      //       done();
+      //     })
+      //     .catch(error => {
+      //       console.log("It puked", error);
+      //       done();
+      //     });
+      //   break;
       default:
         done();
     }

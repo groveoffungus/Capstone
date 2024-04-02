@@ -1,14 +1,8 @@
 import html from "html-literal";
 
 export default state => html`
-  <section id="point">
-    <div class="filter">
-      <label name="selectedProj">Project:</label>
-
-      <input type="search" name="search" id="filter" />
-      <button id="search-button">Search</button>
-    </div>
-    <table id="points">
+  <section id="singlepoint">
+    <table id="singlepoints">
       <tr>
         <th>Project</th>
         <th>Point</th>
@@ -28,12 +22,12 @@ export default state => html`
               <td>${point.lon}</td>
               <td>${point.notes}</td>
               <td>
-                <button
-                  class="edit"
+              <button
+                  class="save"
                   data-id=${point._id}
                   data-index=${point._index}
                 >
-                  Select
+                  Save
                 </button>
               </td>
             </tr>

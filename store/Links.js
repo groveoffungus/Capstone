@@ -1,7 +1,7 @@
 export default [
   { title: "Home", text: "Home" },
-  { title: "About", text: "About" },
-  { title: "Create", text: "Create" },
-  { title: "Point", text: "Point" },
-  { title: "Admin", text: "Admin" },
+  { title: "About", text: "About and Contact" },
+  { title: "Create", text: "Create a Point" },
+  { title: "Point", text: "Search Points" },
+  { title: "Admin", text: "Admin Panel" }
 ];
