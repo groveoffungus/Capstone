@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default () => html`
   <section id="create">
-    <form id="create" method="POST" action="">
+    <form id="create" class="createfilter" method="POST" action="">
       <h2>Create a Data Point</h2>
       <div>
         <label for="project">Project:</label>

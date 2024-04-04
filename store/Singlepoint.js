@@ -1,5 +1,5 @@
 export default {
-  header: "Single Data Point Page",
+  header: "Cultural Archiver",
   view: "Singlepoint",
   points: []
 };

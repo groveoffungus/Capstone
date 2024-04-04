@@ -1,5 +1,5 @@
 export default {
-  header: "Home Page",
+  header: "Cultural Archiver",
   view: "Home",
   weather: {}
 };

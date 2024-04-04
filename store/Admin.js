@@ -1,5 +1,5 @@
 export default {
-  header: "Admin Page",
+  header: "Cultural Archiver",
   view: "Admin",
   points: []
 };

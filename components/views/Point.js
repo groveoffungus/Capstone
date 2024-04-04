@@ -2,13 +2,19 @@ import html from "html-literal";
 
 export default state => html`
   <section id="point">
+  <h2>Data Point Console</h2>
+    <p>
+      <h3>Search for data points based on a project</h3>
+    </p>
     <div class="filter">
+      <h3>Enter a known project</h3>
       <label name="selectedProj">Project:</label>
 
       <input type="search" name="search" id="filter" />
       <button id="search-button">Search</button>
     </div>
-    <table id="points">
+    <div class="pointOutput">
+    <table>
       <tr>
         <th>Project</th>
         <th>Point</th>
@@ -20,7 +26,7 @@ export default state => html`
       ${state.points
         .map((point, index) => {
           return html`
-            <tr>
+            <tr id="pointElements">
               <td>${point.project}</td>
               <td>${point.point}</td>
               <td>${point.type}</td>
@@ -41,5 +47,6 @@ export default state => html`
         })
         .join("")}
     </table>
+    </div>
   </section>
 `;
