@@ -1,5 +1,5 @@
 export default {
-  header: "Display Data Point Page",
+  header: "Cultural Archiver",
   view: "Point",
   points: []
 };

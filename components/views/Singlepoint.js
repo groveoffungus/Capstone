@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default state => html`
   <section id="singlepoint">
-    <table id="singlepoints">
+    <table id="singlepoint">
       <tr>
         <th>Project</th>
         <th>Point</th>
@@ -17,12 +17,44 @@ export default state => html`
             <tr>
               <td>${point.project}</td>
               <td>${point.point}</td>
-              <td>${point.type}</td>
-              <td>${point.lat}</td>
-              <td>${point.lon}</td>
-              <td>${point.notes}</td>
               <td>
-              <button
+                <input
+                  type="text"
+                  name="type"
+                  id="type"
+                  value="${point.type}"
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="lat"
+                  id="lat"
+                  value=${point.lat}
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="lon"
+                  id="lon"
+                  value=${point.lon}
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="notes"
+                  id="notes"
+                  value="${point.notes}"
+                  required
+                />
+              </td>
+              <td>
+                <button
                   class="save"
                   data-id=${point._id}
                   data-index=${point._index}
