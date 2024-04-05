@@ -26,6 +26,13 @@ footer {
   margin: 1rem 1rem;
 }
 
+.centerLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
 #homeinfo {
   border: solid 1px black;
   padding: 2rem 2rem 4rem;
@@ -58,9 +65,23 @@ footer {
 }
 
 .createfilter {
-  background-color: #F2C18D;
+  background-color: #F6F193;
   border: solid 1px black;
-  padding: 1rem 1rem 2rem;
+  padding: 1rem 1rem 1rem;
+  margin: .5rem .5rem;
+}
+
+.pointElements {
+  background-color: #F6F193;
+  border: solid 1px black;
+  padding: 1rem 1rem 1rem;
+  margin: 1rem 1rem;
+}
+
+.adminElements {
+  background-color: #F6F193;
+  border: solid 1px black;
+  padding: 1rem 1rem 1rem;
   margin: 1rem 1rem;
 }
 
@@ -73,9 +94,7 @@ footer {
   font-size: 1em;
 }
 
-/* #pointElements {
-  border: solid 1px black;
-} */
+
 
 @media (max-width: 549px){
   .hidden--mobile {

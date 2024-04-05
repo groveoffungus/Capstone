@@ -124,47 +124,61 @@ function afterRender(state) {
       });
 
     // Add an event handler for the save button
-    // document.getElementById("create").addEventListener("submit", event => {
-    //   event.preventDefault();
+    Array.from(document.querySelectorAll("form.create")).forEach(form => {
+      console.log("Adding event listener for", form.id);
+      // console.log("Project value is", );
+      document.addEventListener("click", event => {
+        event.preventDefault();
 
-    //   // Get the form element
-    //   const inputList = event.target.elements;
-    //   console.log("Input Element List", inputList);
+        // Get the form element
+        // const inputList = {
+        //   project: inputList.project.value,
+        //   dataPoint: inputList.dataPoint.value,
+        //   point: inputList.point.value,
+        //   type: inputList.type.value,
+        //   lat: inputList.lat.value,
+        //   lon: inputList.lon.value,
+        //   notes: inputList.notes.value
+        // };
 
-    //   const pointId = event.target.dataset.id;
-    //   console.log(pointId);
+        // event.target.elements;
+        // console.log("Input Element List", inputList);
 
-    //   // Create a request body object to send to the API
-    //   const editedData = {
-    //     project: inputList.project.value,
-    //     dataPoint: inputList.dataPoint.value,
-    //     point: inputList.point.value,
-    //     type: inputList.type.value,
-    //     lat: inputList.lat.value,
-    //     lon: inputList.lon.value,
-    //     notes: inputList.notes.value
-    //   };
+        // const pointId = event.target.dataset.id;
+        // console.log(pointId);
 
-    //   axios
-    //     // Make a POST request to the API to save any data point changes
-    //     .put(
-    //       `${process.env.CULTURAL_ARCHIVE_API_URL}/projects/${pointId}`,
-    //       editedData
-    //     )
-    //     .then(response => {
-    //       // After successfully changing and saving new data
-    //       // Display success message and wait for user click OK
-    //       // Return to a fresh admin view
-    //       confirm(`Data entry is successful for ID ${pointId}.`);
-    //       router.navigate("/Admin");
-    //     })
-    //     // If there is an error log it to the console
-    //     .catch(error => {
-    //       console.log("It puked", error);
-    //     });
+        // // Create a request body object to send to the API
+        // const editedData = {
+        //   project: inputList.project.value,
+        //   dataPoint: inputList.dataPoint.value,
+        //   point: inputList.point.value,
+        //   type: inputList.type.value,
+        //   lat: inputList.lat.value,
+        //   lon: inputList.lon.value,
+        //   notes: inputList.notes.value
+        // };
+        // console.log(editedData);
+        // axios
+        //   // Make a POST request to the API to save any data point changes
+        //   .put(
+        //     `${process.env.CULTURAL_ARCHIVE_API_URL}/projects/${pointId}`,
+        //     editedData
+        //   )
+        //   .then(response => {
+        //     // After successfully changing and saving new data
+        //     // Display success message and wait for user click OK
+        //     // Return to a fresh admin view
+        //     confirm(`Data entry is successful for ID ${pointId}.`);
+        //     router.navigate("/Admin");
+        //   })
+        //   // If there is an error log it to the console
+        //   .catch(error => {
+        //     console.log("It puked", error);
+        //   });
 
-    //   router.navigate("/Admin");
-    // });
+        // router.navigate("/Admin");
+      });
+    });
   }
 
   if (state.view == "Singlepoint") {

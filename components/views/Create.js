@@ -2,9 +2,9 @@ import html from "html-literal";
 
 export default () => html`
   <section id="create">
-    <form id="create" class="createfilter" method="POST" action="">
+    <form id="create" class="filter" method="POST" action="">
       <h2>Create a Data Point</h2>
-      <div>
+      <div class="createfilter">
         <label for="project">Project:</label>
         <select id="project" name="project">
           <option value="">Select a Project</option>
@@ -14,7 +14,7 @@ export default () => html`
           <option value="Project004">Project004</option>
         </select>
       </div>
-      <div>
+      <div class="createfilter">
         <label for="point">Point:</label>
         <input
           type="text"
@@ -24,7 +24,7 @@ export default () => html`
           required
         />
       </div>
-      <div>
+      <div class="createfilter">
         <label for="type">Point Type:</label>
         <select id="type" name="type">
           <option value="">Select a Point Type</option>
@@ -34,7 +34,7 @@ export default () => html`
           <option value="other">Other</option>
         </select>
       </div>
-      <div>
+      <div class="createfilter">
         <label for="lat">Latitude:</label>
         <input
           type="number"
@@ -45,7 +45,7 @@ export default () => html`
           required
         />
       </div>
-      <div>
+      <div class="createfilter">
         <label for="lon">Longitude:</label>
         <input
           type="number"
@@ -56,7 +56,7 @@ export default () => html`
           required
         />
       </div>
-      <div>
+      <div class="createfilter">
         <label for="notes">Notes:</label>
         <input type="text" name="notes" id="notes" placeholder="Enter Notes" maxlength="50" />
       </div>
