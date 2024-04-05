@@ -25,9 +25,16 @@ export default state => html`
       ${state.points
         .map((point, index) => {
           return html`
-            <form id="create" method="POST" action="">
+            <form
+              id="${point._id}"
+              class="create"
+              method="POST"
+              action=""
+              data-id=${point._id}
+              data-index=${point._index}
+            >
               <tr>
-                <td>
+                <td class="adminElements">
                   <input
                     type="text"
                     name="project"
@@ -36,7 +43,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="text"
                     name="point"
@@ -45,7 +52,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="boolean"
                     name="dataPoint"
@@ -54,7 +61,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="text"
                     name="type"
@@ -63,7 +70,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="number"
                     name="lat"
@@ -72,7 +79,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="number"
                     name="lon"
@@ -81,7 +88,7 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
+                <td class="adminElements">
                   <input
                     type="text"
                     name="notes"
@@ -90,14 +97,9 @@ export default state => html`
                     required
                   />
                 </td>
-                <td>
-                  <input
-                    type="submit"
-                    name="submit"
-                    value="Save"
-                    data-id=${point._id}
-                    data-index=${point._index}
-                  />
+                <td class="adminElements">
+                  <!-- <input type="text" name="submit" value="Save" /> -->
+                  <button id="create">Save</button>
                 </td>
               </tr>
             </form>

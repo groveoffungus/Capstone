@@ -3,7 +3,7 @@ import html from "html-literal";
 export default state => html`
   <section id="home">
     <h2>Cultural Archiver</h2>
-    <div id=homeinfo>
+    <div id="homeinfo">
       <h3>Why cultural preservation?</h3>
       <p>
         Cultural preservation is vital for several reasons. Firstly, it helps to

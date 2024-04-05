@@ -26,7 +26,7 @@ export default state => html`
       ${state.points
         .map((point, index) => {
           return html`
-            <tr id="pointElements">
+            <tr id="pointElements" class="pointElements">
               <td>${point.project}</td>
               <td>${point.point}</td>
               <td>${point.type}</td>
